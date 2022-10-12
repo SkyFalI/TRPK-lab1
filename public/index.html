@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.18.12/package/dist/xlsx.full.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body style="text-align: center; font-size: 18px;">
+    Для использования скрипта нужно нажать кнопку синхронизировать, в таком случае скрипт автоматически подставит начальную дату и конечную (start: 2015-12-24, end: сегодняшнее число)<br>
+    Скрипт получает данные из битрикса, фильтрует их по дате, данные загружаются в JSON, создает excel из данных JSON и отправляет файл на яндекс.<br>
+    Для сохранения в свой яндекс диск нужно вставить в файл script.js свой OA token в переменную "YandexOAuth" (первая строчка) и свой Bitrix token в перменную "BitrixApi" (вторая строчка)<br>
+    <input style="margin: 10px;" type="date" class="start_date">
+    <input style="margin: 10px;" type="date" class="end_date">
+    <br>
+    <button style="margin: 10px; height: 32px;" onclick="main()">синхронизировать</button> <br>
+    <a href="https://disk.yandex.ru/client/disk" target="_blank">Ссылка на яндекс диск</a>
+</body>
+</html>
